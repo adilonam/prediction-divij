@@ -148,6 +148,6 @@ if uploaded_file is not None:
         # Display the predictions DataFrame
         st.write("Predictions for the selected date range:")
         st.dataframe(df_new)
-        st.write(f"Predictions {df_new['Predicted_Inventory_is_Positive'].sum()} Positive of {len(df_new)} days")
+        st.write(f"Predictions {df_new['Predicted_Inventory_is_Positive'].sum()} Positive and {len(df_new) - df_new['Predicted_Inventory_is_Positive'].sum()} Negative of {len(df_new)} days")
         # Display the prediction with an emoji
         st.write(f"🎉 Predicted values for the selected date range are shown in the table above.")
